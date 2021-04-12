@@ -6,8 +6,8 @@
   
     "scripts": {
       "build": "babel src --out-dir dist", 
-      "start": "node dist/app.js",
-      "dev": "nodemon src/app.js --exec babel-node"
+      "start": "node -r dotenv/config dist/app.js",
+      "dev": "nodemon -r dotenv/config src/app.js --exec babel-node"
   },
   "keywords": [],
   "author": "",

@@ -8,6 +8,8 @@ import '@babel/polyfill';
 //import { sequelize } from './database/database';
 
 const app = express();
+const { PORT } = process.env
+
 //middlewares
 app.use(json())
 app.use(morgan('dev'))
@@ -21,6 +23,6 @@ app.get('/', (req, res)=>{
 
 const server = http.createServer(app);
 
-server.listen('3001', ()=>{
+server.listen(PORT, ()=>{
     console.log('servidor iniciado en el puerto 3001');
 })
